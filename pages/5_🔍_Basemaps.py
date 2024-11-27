@@ -24,7 +24,7 @@ This app is a demonstration of searching and loading basemaps from [xyzservices]
 with st.expander("See demo"):
     st.image("https://i.imgur.com/0SkUhZh.gif")
 
-row1_col1, row1_col2 = st.columns([3, 1])
+row1_col1, row1_col2 = st.columns([3, 1]) # 比例3:1
 width = None
 height = 800
 tiles = None
