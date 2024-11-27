@@ -173,14 +173,14 @@ with row2_4:
     map(filterdata(data, hour_selected), newark[0], newark[1], zoom_level)
 
 # CALCULATING DATA FOR THE HISTOGRAM
-chart_data = histdata(data, hour_selected)
+chart_data = histdata(data, hour_selected)   # filter data
 
 # LAYING OUT THE HISTOGRAM SECTION
-st.write(
+st.write( 
     f"""**Breakdown of rides per minute between {hour_selected}:00 and {(hour_selected + 1) % 24}:00**"""
 )
 
-st.altair_chart(
+st.altair_chart(   # draw the chart
     alt.Chart(chart_data)
     .mark_area(
         interpolate="step-after",
